@@ -1,8 +1,8 @@
 ## Maze Generator and Solver
 
-A two-persons team project for `CS146 - Data Structures and Algorithms` in _San Jose State University_. This project takes in a number _N_ between 4 and 10 inclusive and randomly generates a square-sized (_NxN_) maze. It also subsequently solves the maze and output both the maze and the solution's path.
+A two-persons team project for `CS146 - Data Structures and Algorithms` at _San Jose State University_. This project takes in a number _N_ between 4 and 10 inclusive and randomly generates a square-sized (_NxN_) maze. It subsequently solves the maze and output both the maze and the solution's path.
 
-![maze console](https://i.imgur.com/5rRCwiU.png)
+![maze console](https://i.imgur.com/B85Lg1O.png)
 
 ## Languages/Technologies
 * Java
@@ -14,15 +14,15 @@ A two-persons team project for `CS146 - Data Structures and Algorithms` in _San 
 
 The maze generator framework is built using the graph data structure. We define the graph using an adjacency list, or an array of 
 linked lists containing all neighbors of particular vertices. We define our own Linked List class with additional, custom methods and 
-use it for the adjacency matrix.
+use it for the list.
 
-We implemented a depth first search algorithm to determine the edges. Our algorithm involves randomizing the edges for each 
+We implement a depth first search algorithm to determine the edges. Our algorithm involves randomizing the edges for each 
 vertex with a couple of constraints:
 
 * The maze must be perfect. In other words, it must have one and only one path from the starting point to the ending point. 
 Additionally, it cannot have any accessible sections, circular paths, or open areas.
 * The maze also must be fully connected. Every generated room should be reachable from the starting point. 
-There cannot be no rooms or areas that are completely blocked off from the rest of the maze.
+There cannot be any rooms or areas that are completely blocked off from the rest of the maze.
 
 Here is a code snippet of our algorithm:
 
